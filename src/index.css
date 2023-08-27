@@ -7,7 +7,7 @@
         @apply flex justify-between p-2 px-6 bg-[#353535] text-white font-bold
     }
     .nav-menu{
-        @apply hidden absolute top-[13%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
+        @apply hidden absolute top-[18%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
         /* display: none; */
     }
     .site-logo{
