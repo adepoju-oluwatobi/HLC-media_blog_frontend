@@ -4,7 +4,7 @@
 
 @layer components{
     .header{
-        @apply flex justify-between p-2 px-6 bg-[#353535] text-white font-bold
+        @apply flex justify-between p-1 px-6 bg-[#353535] text-white font-bold
     }
     .nav-menu{
         @apply hidden absolute top-[18%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
@@ -18,6 +18,10 @@
         font-family: 'Jolly Lodger', cursive;
         font-size: 40px;
     }
+    .content{
+        font-family: 'Josefin Slab', serif;
+        font-size: 12px;
+    }
     .menu-icon{
         @apply w-6
     }
@@ -25,7 +29,7 @@
         @apply hidden
     }
     .post-title{
-        @apply font-bold text-xl
+        @apply font-bold text-[20px]
     }
     .container{
         @apply p-4

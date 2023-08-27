@@ -12,7 +12,7 @@ function ImageSlider() {
 
   return (
     <div className="z-[0]">
-      <Carousel autoPlay interval={3000} infiniteLoop showThumbs={false}>
+      <Carousel autoPlay interval={4000} infiniteLoop showThumbs={false}>
         {images.map((image, index) => (
           <div key={index}>
             <img src={image} alt="" />

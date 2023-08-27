@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "Jolly Lodger";
+    src: url("/path/to/font/file.woff2") format("woff2");
+    /* Add other font formats if needed */
+}
