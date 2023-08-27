@@ -8,7 +8,9 @@ function PostPage() {
 
   async function fetchData() {
     try {
-      const response = await axios.get("http://localhost:3000/api/user");
+      const response = await axios.get(
+        "https://hlc-media-backend.onrender.com/api/user"
+      );
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);

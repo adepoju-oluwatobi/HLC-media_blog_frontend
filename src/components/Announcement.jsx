@@ -8,7 +8,7 @@ function Announcement() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/announcement"
+          "https://hlc-media-backend.onrender.com/api/announcement"
         );
         setData(response.data);
       } catch (error) {
@@ -34,7 +34,7 @@ function Announcement() {
         ) : (
           <p>Loading...</p>
         )}
-        <p className='py-1 px-2 bg-black w-fit text-white rounded-xl mt-2'>Read More...</p>
+        <p className='p-2 bg-black w-fit text-white rounded-xl mt-2'>Read More...</p>
       </div>
     </div>
   );
