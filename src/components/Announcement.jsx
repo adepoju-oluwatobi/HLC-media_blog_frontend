@@ -1,15 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import AnnImg from '../assets/ann-img.png';
+import { server_announcement } from '../server';
 
 function Announcement() {
     const [data, setData] = useState(null);
 
     async function fetchData() {
       try {
-        const response = await axios.get(
-          "https://hlc-media-backend.onrender.com/api/announcement"
-        );
+        const response = await axios.get(`${server_announcement}`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -25,10 +24,10 @@ function Announcement() {
         <p className="bg-[#C02E5A] w-fit px-2 py-1 text-white rounded-xl relative top-8">Announcements</p>
         <img src={AnnImg} alt="" />
         {data ? (
-          data.map((post) => (
-            <div key={post.id}>
-              <p className="post-title">{post.title}</p>
-              <p className="content">{post.des}</p>
+          data.map((announcement) => (
+            <div key={announcement.id}>
+              <p className="post-title">{announcement.title}</p>
+              <p className="content">{announcement.des}</p>
             </div>
           ))
         ) : (
