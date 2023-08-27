@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .header{
+        @apply flex justify-between p-2 px-6 bg-[#353535] text-white font-bold
+    }
+    .nav-menu{
+        @apply hidden absolute top-[10%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
+        /* display: none; */
+    }
+    .site-logo{
+        @apply rounded-full
+    }
+    .site-title{
+        font-family: 'Epilogue', sans-serif;
+        font-family: 'Jolly Lodger', cursive;
+        font-size: 40px;
+    }
+    .menu-icon{
+        @apply w-6
+    }
+    .menu-close-icon{
+        @apply hidden
+    }
+    .post-title{
+        @apply font-bold text-xl
+    }
+    .container{
+        @apply p-4
+    }
+}
