@@ -1,43 +1,54 @@
-import React from 'react'
-import MenuIcon from '../assets/menu-icon.svg'
-import CloseIcon from '../assets/menu-close-icon.svg'
-import Logo from '../assets/logo.png'
+import React, { useState } from "react";
+import MenuIcon from "../assets/menu-icon.svg";
+import CloseIcon from "../assets/menu-close-icon.svg";
+import Logo from "../assets/logo.png";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Header() {
-    let MenuOpenIcon = document.getElementById("menu-open-icon");
-    let MenuCloseIcon = document.getElementById('menu-close-icon');
-    let NavMenu = document.getElementById('nav-menu');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    function openMenu(){
-        NavMenu = document.getElementById("nav-menu").style.display = "flex"
-        MenuOpenIcon = document.getElementById("menu-open-icon").style.display = "none"
-        MenuCloseIcon = document.getElementById("menu-close-icon").style.display = "block"
-    }
-    function closeMenu(){
-        NavMenu = document.getElementById("nav-menu").style.display = "none";
-        MenuOpenIcon = document.getElementById("menu-open-icon").style.display =
-          "block";
-        MenuCloseIcon = document.getElementById(
-          "menu-close-icon"
-        ).style.display = "none";
-    }
+  function openMenu() {
+    setIsMenuOpen(true);
+  }
+
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
   return (
     <div>
       <div className="header">
         <div className="flex items-center gap-2">
-          <img className='site-logo' src={Logo} alt="" />
+          <img className="site-logo" src={Logo} alt="" />
           <p className="site-title">HLC media</p>
         </div>
-        <img onClick={closeMenu} id='menu-close-icon' className="menu-close-icon" src={CloseIcon} alt="" />
-        <img onClick={openMenu} id='menu-open-icon' className="menu-icon" src={MenuIcon} alt="" />
-        <nav id='nav-menu' className="nav-menu">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+        <img
+          onClick={closeMenu}
+          id="menu-close-icon"
+          className={`menu-close-icon ${isMenuOpen ? "visible" : "hidden"}`}
+          src={CloseIcon}
+          alt=""
+        />
+        <img
+          onClick={openMenu}
+          id="menu-open-icon"
+          className={`menu-icon ${isMenuOpen ? "hidden" : "visible"}`}
+          src={MenuIcon}
+          alt=""
+        />
+        <nav
+          id="nav-menu"
+          className={`nav-menu ${isMenuOpen ? "visible" : "hidden"}`}
+        >
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/login">Login</Link>
         </nav>
       </div>
+      {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
     </div>
   );
 }
 
-export default Header
+export default Header;

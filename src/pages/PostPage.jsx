@@ -21,7 +21,7 @@ function PostPage() {
   return (
     <div>
       <div className="container">
-        <h1>Post</h1>
+        <p className="bg-[#51A4BE] w-fit text-white px-10 py-2 mb-2 rounded-xl">All Post</p>
         {data ? (
           data.map((post) => (
             <div key={post.id}>

@@ -4,10 +4,10 @@
 
 @layer components{
     .header{
-        @apply flex justify-between p-1 px-6 bg-[#353535] text-white font-bold
+        @apply flex justify-between p-2 px-6 bg-[#353535] text-white font-bold
     }
     .nav-menu{
-        @apply hidden absolute top-[18%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
+        @apply flex absolute top-[10%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
         /* display: none; */
     }
     .site-logo{
@@ -16,7 +16,7 @@
     .site-title{
         font-family: 'Epilogue', sans-serif;
         font-family: 'Jolly Lodger', cursive;
-        font-size: 40px;
+        font-size: 20px;
     }
     .content{
         font-family: 'Josefin Slab', serif;
@@ -24,9 +24,6 @@
     }
     .menu-icon{
         @apply w-6
-    }
-    .menu-close-icon{
-        @apply hidden
     }
     .post-title{
         @apply font-bold text-[20px]

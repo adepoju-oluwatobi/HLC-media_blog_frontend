@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PostPage from "./pages/PostPage";
 import ImageSlider from "./components/ImageSlider";
 import Announcement from "./components/Announcement";
+import CreatePost from "./components/CreatePost";
 
 function App() {
   return (
