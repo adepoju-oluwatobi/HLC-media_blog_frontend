@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+        "src": "/",
+        "dest": "/admin"
+    },
+    {
+        "src": "/",
+        "dest": "/login"
+    },
+    {
+        "src": "/",
+        "dest": "/edit/:postId"
+    }
+  ]
+}
+  
