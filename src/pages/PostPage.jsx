@@ -50,7 +50,7 @@ function PostPage() {
             <img className="w-[90%] rounded-xl" src={post.image} alt="" />
             <p className="post-title">{post.title}</p>
             {expandedPostId === post.id && (
-              <p className="content">{post.des}</p>
+              <p className="">{post.des}</p>
             )}
             <button
               className="text-blue-500 hover:underline"

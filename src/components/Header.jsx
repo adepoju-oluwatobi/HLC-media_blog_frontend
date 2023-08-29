@@ -20,8 +20,8 @@ function Header() {
       <div className="header">
         <Link to="/">
           <div className="flex items-center gap-2">
-            <img className="site-logo" src={Logo} alt="" />
-            <p className="site-title">HLC media</p>
+            {/* <img className="site-logo" src={Logo} alt="" /> */}
+            <p className="site-title">HLC media Ipaja</p>
           </div>
         </Link>
         <img
