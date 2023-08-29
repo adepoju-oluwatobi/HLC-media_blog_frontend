@@ -5,16 +5,16 @@
       "dest": "/"
     },
     {
-        "src": "/",
-        "dest": "/admin"
+        "src": "/admin",
+        "dest": "/"
     },
     {
-        "src": "/",
-        "dest": "/login"
+        "src": "/login",
+        "dest": "/"
     },
     {
-        "src": "/",
-        "dest": "/edit/:postId"
+        "src": "/edit/:postId",
+        "dest": "/"
     }
   ]
 }
