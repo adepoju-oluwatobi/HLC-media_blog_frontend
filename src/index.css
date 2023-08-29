@@ -7,11 +7,11 @@
         @apply flex justify-between p-2 px-6 bg-[#353535] text-white font-bold
     }
     .nav-menu{
-        @apply flex absolute top-[10%] bg-black bg-opacity-50 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
+        @apply flex absolute top-[10%] bg-black bg-opacity-90 p-4 flex-col gap-4 w-[90%] text-center rounded-xl z-[999]
         /* display: none; */
     }
     .site-logo{
-        @apply rounded-full
+        @apply rounded-lg
     }
     .site-title{
         font-family: 'Epilogue', sans-serif;
@@ -21,6 +21,7 @@
     .content{
         font-family: 'Josefin Slab', serif;
         font-size: 12px;
+        
     }
     .menu-icon{
         @apply w-6
@@ -29,6 +30,9 @@
         @apply font-bold text-[20px]
     }
     .container{
-        @apply p-4
+        @apply p-2 w-[90%] m-auto
+    }
+    .section{
+        @apply mt-10
     }
 }

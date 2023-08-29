@@ -5,6 +5,7 @@ import PostPage from "./pages/PostPage";
 import ImageSlider from "./components/ImageSlider";
 import Announcement from "./components/Announcement";
 import CreatePost from "./components/CreatePost";
+import RecentPost from "./components/RecentPost";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <ImageSlider />
       <Announcement />
+      <RecentPost />
       <PostPage />
     </div>
   );

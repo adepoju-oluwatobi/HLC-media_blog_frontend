@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import AdminPage from "./pages/AdminPage";
 import Login from "./pages/Login";
+import EditPost from "./components/EditPost";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "/edit/:postId",
+    element: <EditPost />
   }
 ]);
 

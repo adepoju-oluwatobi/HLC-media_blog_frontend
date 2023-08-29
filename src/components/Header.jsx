@@ -18,10 +18,12 @@ function Header() {
   return (
     <div>
       <div className="header">
-        <div className="flex items-center gap-2">
-          <img className="site-logo" src={Logo} alt="" />
-          <p className="site-title">HLC media</p>
-        </div>
+        <Link to="/">
+          <div className="flex items-center gap-2">
+            <img className="site-logo" src={Logo} alt="" />
+            <p className="site-title">HLC media</p>
+          </div>
+        </Link>
         <img
           onClick={closeMenu}
           id="menu-close-icon"

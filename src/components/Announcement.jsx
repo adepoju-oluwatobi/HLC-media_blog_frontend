@@ -18,8 +18,8 @@ function Announcement() {
       fetchData();
     }, []);
   return (
-    <div>
-      <div className="p-4 mt-[-20px]">
+    <div className='container'>
+      <div className="mt-[-20px]">
         <p className="bg-[#C02E5A] w-fit px-2 py-1 text-white rounded-xl relative top-8">
           Announcements
         </p>
