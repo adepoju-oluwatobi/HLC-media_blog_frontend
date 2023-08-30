@@ -47,13 +47,11 @@ function PostPage() {
         </p>
         {data.map((post) => (
           <div key={post.id} className="mt-4">
-            <img className="w-[90%] rounded-xl" src={post.image} alt="" />
+            <img className="w-[90%] h-[150px] rounded-xl" src={post.image} alt="" />
             <p className="post-title">{post.title}</p>
-            {expandedPostId === post.id && (
-              <p className="">{post.des}</p>
-            )}
+            {expandedPostId === post.id && <p className="content">{post.des}</p>}
             <button
-              className="text-blue-500 hover:underline"
+              className="read-more"
               onClick={() => handleToggleContent(post.id)}
             >
               {expandedPostId === post.id ? "Hide Content" : "Read More"}

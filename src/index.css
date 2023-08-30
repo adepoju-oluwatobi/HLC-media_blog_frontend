@@ -20,11 +20,11 @@
     }
     .content{
         font-family: 'Josefin Slab', serif;
-        font-size: 12px;
+        font-size: 16px;
         
     }
     .menu-icon{
-        @apply w-6
+        @apply w-4
     }
     .post-title{
         @apply font-bold text-[20px]
@@ -34,5 +34,8 @@
     }
     .section{
         @apply mt-10
+    }
+    .read-more{
+        @apply p-2 bg-black text-white rounded-xl
     }
 }

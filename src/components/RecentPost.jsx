@@ -39,24 +39,19 @@ function RecentPost() {
         <div className="bg-white shadow-md p-6 rounded-md">
           <img className="rounded-xl" src={recentPost.image} alt="" />
           <h3 className="text-lg font-semibold mb-2">{recentPost.title}</h3>
-          {showFullContent ? (
-            <div>
-              <p>{recentPost.des}</p>
-              <button
-                className="text-blue-500 hover:underline mt-2"
-                onClick={toggleContent}
-              >
-                Hide Content
-              </button>
-            </div>
-          ) : (
-            <button
-              className="text-blue-500 hover:underline"
-              onClick={toggleContent}
-            >
-              Read More
-            </button>
-          )}
+          <div
+            className={`overflow-hidden transition-all duration-300 ${
+              showFullContent ? "max-h-96" : "max-h-0"
+            }`}
+          >
+            <p className="content">{recentPost.des}</p>
+          </div>
+          <button
+            className="mt-2 read-more"
+            onClick={toggleContent}
+          >
+            {showFullContent ? "Hide Content" : "Read More"}
+          </button>
         </div>
       ) : (
         <p>No recent posts found.</p>
